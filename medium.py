@@ -28,3 +28,12 @@ class Solution:
                     right -= 1
                     
         return out
+    
+    def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
+        dict_list = {n:[] for n in set(groupSizes)}
+        for i, n in enumerate(groupSizes): dict_list[n].append(i)
+        out = []
+        for key, item in dict_list.items():
+            for n in range(0, len(item)//key):
+                out.append(item[n*key: key*(n+1)])
+        return out
