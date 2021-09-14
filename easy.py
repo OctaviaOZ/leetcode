@@ -35,3 +35,12 @@ class Solution:
     
     def runningSum(self, nums: List[int]) -> List[int]:
         return [sum(nums[:i]) for i in range(1, len(nums)+1)]
+    
+    #Runtime less. Doesn't use sum build-in function
+    def runningSum(self, nums: List[int]) -> List[int]:
+        out = []
+        out_append = out.append
+        out_append(nums[0])
+        for i in range(1, len(nums)):
+            out_append(nums[i] + out[i-1])
+        return out  
