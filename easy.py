@@ -32,3 +32,6 @@ class Solution:
             if max_sum < win_sum:
                 max_sum = win_sum
         return max_sum / k   
+    
+    def runningSum(self, nums: List[int]) -> List[int]:
+        return [sum(nums[:i]) for i in range(1, len(nums)+1)]
