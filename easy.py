@@ -25,6 +25,7 @@ class Solution:
          
         return []  
     
+    
     def findMaxAverage(self, nums: List[int], k: int) -> float:
         max_sum = win_sum = sum(nums[0:k])
         for i in range(0, len(nums)-k):
@@ -33,8 +34,10 @@ class Solution:
                 max_sum = win_sum
         return max_sum / k   
     
+    
     def runningSum(self, nums: List[int]) -> List[int]:
         return [sum(nums[:i]) for i in range(1, len(nums)+1)]
+    
     
     #Runtime less. Doesn't use sum build-in function
     def runningSum(self, nums: List[int]) -> List[int]:
@@ -44,3 +47,12 @@ class Solution:
         for i in range(1, len(nums)):
             out_append(nums[i] + out[i-1])
         return out  
+
+    
+    def checkIfExist(self, arr: List[int]) -> bool:
+        dict_n = {2*n:i for i, n in enumerate(arr)}
+        for i, n in enumerate(arr):
+            j = dict_n.get(n, None)
+            if (j is not None) and (j != i): 
+                return True
+        return False 
