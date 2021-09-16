@@ -37,3 +37,17 @@ class Solution:
             for n in range(0, len(item)//key):
                 out.append(item[n*key: key*(n+1)])
         return out
+    
+     def arrayNesting(self, nums: List[int]) -> int:
+        r, inn = 0, set()
+        for i in range(len(nums)):
+            out, idx = 0, set()
+            if i not in inn:
+                while True:
+                    if i in idx: break
+                    idx.add(i)
+                    inn.add(i)
+                    i = nums[i]
+                    out+=1
+                    r = max(out, r)  
+        return r  
