@@ -5,6 +5,7 @@
 1. Two Sum. twoSum()
 643. Maximum Average Subarray I. findMaxAverage()
 1480. Running Sum of 1d Array. runningSum()
+Check If N and Its Double Exist. checkIfExist()
 
 ## [medium.py](/medium.py).
 
