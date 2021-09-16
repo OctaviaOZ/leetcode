@@ -7,5 +7,6 @@
 
 ## [medium.py](/medium.py).
 
+15. 3Sum. threeSum()
 1282. Group the People Given the Group Size They Belong To. groupThePeople()
-1283. arrayNesting arrayNesting()
+1283. Array Nesting. arrayNesting()
