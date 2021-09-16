@@ -6,6 +6,7 @@
 643. Maximum Average Subarray I. findMaxAverage()
 1480. Running Sum of 1d Array. runningSum()
 Check If N and Its Double Exist. checkIfExist()
+Valid Mountain Array. validMountainArray()
 
 ## [medium.py](/medium.py).
 
