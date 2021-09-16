@@ -56,4 +56,19 @@ class Solution:
                 return True
             else:
                 dict_n[n] = i
-        return False  
+        return False 
+    
+    
+    def validMountainArray(self, arr: List[int]) -> bool:
+        incr, last_i = 1, len(arr) - 1
+        for i, n in enumerate(arr):
+            if i == last_i:
+                break
+            if ( (incr == 1) and (n < arr[i+1]) ) or ( (incr == -1) and (n > arr[i+1]) ): 
+                continue
+            elif (incr == 1) and (n > arr[i+1]) and (i != 0):
+                incr = -1
+            else:    
+                return False  
+         
+        return True if incr == -1 else False
