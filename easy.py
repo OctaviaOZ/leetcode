@@ -50,9 +50,10 @@ class Solution:
 
     
     def checkIfExist(self, arr: List[int]) -> bool:
-        dict_n = {2*n:i for i, n in enumerate(arr)}
+        dict_n = {}
         for i, n in enumerate(arr):
-            j = dict_n.get(n, None)
-            if (j is not None) and (j != i): 
+            if (n*2 in dict_n) or (n/2 in dict_n): 
                 return True
-        return False 
+            else:
+                dict_n[n] = i
+        return False  
