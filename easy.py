@@ -2,7 +2,7 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-                        
+                
         if (len(nums) < 2)|(len(nums) > 1e5):
             return []
         
@@ -16,14 +16,14 @@ class Solution:
                     return []
                 
                 num_seek = target - num
-                if num_seek in filter_dict:
-                    idx = filter_dict.get(num_seek)
+                idx = filter_dict.get(num_seek, None)
+                if idx is not None:
                     return [idx, i]
                 
                 if not num in filter_dict:
                     filter_dict[num] = i
          
-        return []  
+        return []
     
     
     def findMaxAverage(self, nums: List[int], k: int) -> float:
