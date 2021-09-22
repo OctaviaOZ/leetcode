@@ -7,6 +7,7 @@
 1480. Running Sum of 1d Array. runningSum()
 Check If N and Its Double Exist. checkIfExist()
 Valid Mountain Array. validMountainArray()
+88. Merge Sorted Array. Merge()
 
 ## [medium.py](/medium.py).
 
